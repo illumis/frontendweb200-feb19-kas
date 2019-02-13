@@ -17,7 +17,6 @@ export function reducer(state: State = initialState, action: Action): State {
         heading: state.heading.toUpperCase(),
         greeting: state.greeting
       };
-
     }
     default: {
       return state;

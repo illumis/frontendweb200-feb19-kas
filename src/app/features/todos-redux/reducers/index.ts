@@ -1,12 +1,15 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import * as fromMessage from './messages.reducer';
+import * as fromTodos from './todos.reducers';
 
 export interface TodosState {
   message: fromMessage.State;
+  todos: fromTodos.State;
 }
 
 export const reducers = {
-  message: fromMessage.reducer
+  message: fromMessage.reducer,
+  todos: fromTodos.reducer
 };
 
 // 1. Create a feature selector (for todos-redux.module.ts's StoreModule)
