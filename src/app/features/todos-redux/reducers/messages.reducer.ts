@@ -11,5 +11,18 @@ const initialState: State = {
 };
 
 export function reducer(state: State = initialState, action: Action): State {
-  return state;
+  switch (action.type) {
+    case 'CLICKY': {
+      return {
+        heading: state.heading.toUpperCase(),
+        greeting: state.greeting
+      };
+
+    }
+    default: {
+      return state;
+    }
+
+  }
+
 }

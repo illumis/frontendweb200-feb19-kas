@@ -16,4 +16,8 @@ export class TodosReduxComponent implements OnInit {
   ngOnInit() {
     this.message$ = this.store.select(selectHeaderMessage);
   }
+
+  doneClicked() {
+    this.store.dispatch({ type: 'CLICKY' });
+  }
 }
