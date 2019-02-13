@@ -16,6 +16,7 @@ const initialState: State = {
   }
 };
 
+// generate default selectors for entity that are used in helpers of the reducer
 export const adapter = createEntityAdapter<TodoEntity>();
 
 export function reducer(state: State = initialState, action: Action): State {
