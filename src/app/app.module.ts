@@ -32,7 +32,7 @@ import { reducers } from './reducers';
     TodosReduxModule,
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument(),
-    EffectsModule
+    EffectsModule.forRoot([])
   ],
   providers: [TodoDataService],
   bootstrap: [AppComponent]
