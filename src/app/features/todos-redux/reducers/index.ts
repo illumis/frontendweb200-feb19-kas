@@ -21,3 +21,9 @@ const selectMessage = createSelector(selectTodosFeature, f => f.message);
 // 4. Create a selector for what the component needs
 //    selectHeading(): string
 export const selectHeaderMessage = createSelector(selectMessage, m => m.heading);
+export const selectGreeting = createSelector(selectMessage, m => m.greeting);
+
+/* Notes:
+- Steps 1/2 are private infrastructure
+- Step 4 is where public selectors used by other components
+*/
