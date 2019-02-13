@@ -28,6 +28,7 @@ const { selectAll: selectTodosEntityArray } = fromTodos.adapter.getSelectors(sel
 export const selectHeaderMessage = createSelector(selectMessage, m => m.heading);
 export const selectGreeting = createSelector(selectMessage, m => m.greeting);
 export const selectTodoListItems = createSelector(selectTodosEntityArray, t => t.map(x => x as TodoListItem));
+
 /* Notes:
 - Steps 1/2 are private infrastructure
 - Step 4 is where public selectors used by other components
